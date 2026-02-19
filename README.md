@@ -1,105 +1,104 @@
-🎵 MP3 Tag Reader and Editor
+🏦 Bank Account Management System
 📌 Overview
 
-MP3 Tag Reader and Editor is a C-based application designed to read and modify metadata (ID3 tags) of MP3 files.
-The project allows users to view and edit essential audio metadata such as Title, Artist, Album, Year, Genre, and Comments.
+The Bank Account Management System is a C-based application designed to simulate basic banking operations through a command-line interface.
 
-This tool works directly with the binary structure of MP3 files and demonstrates low-level file handling, string manipulation, and structured data processing in C.
+The system allows users to create accounts, deposit and withdraw money, check account details, and manage customer records efficiently.
+This project demonstrates structured programming, file handling, and data management using C.
 
 🚀 Features
 
-📖 Read ID3v2 tags from MP3 files
+🆕 Create new bank accounts
 
-✏️ Edit metadata fields:
+💰 Deposit money
 
-Title
+💸 Withdraw money
 
-Artist
+📊 Check account balance
 
-Album
+📄 View account details
 
-Year
+❌ Delete account
 
-Genre
+💾 Persistent storage using file handling
 
-Comments
-
-🛠 Binary file processing using fread() and fwrite()
-
-📂 Command-line based interface
-
-🧠 Efficient memory management
+🔐 Basic input validation and error handling
 
 🛠 Technologies Used
 
 C Programming Language
 
+Structures (struct)
+
 File Handling (fopen, fread, fwrite)
 
-Structures
+Conditional Statements
 
-Bitwise Operations
+Loops
 
-String Handling Functions
+Functions (Modular Programming)
 
-Modular Programming
+Basic Data Validation
 
 📂 Project Structure
 ├── main.c
-├── tag_reader.c
-├── tag_editor.c
-├── common.h
-├── types.h
+├── account.c
+├── account.h
+├── file_operations.c
+├── file_operations.h
 └── README.md
 
 🧠 Working Principle
 
-MP3 files store metadata in ID3 format.
-This project:
+User selects an operation from the menu.
 
-Opens the MP3 file in binary mode.
+Account details are stored using structures.
 
-Locates the ID3 header.
+Data is saved permanently using binary file storage.
 
-Reads frame headers (e.g., TIT2, TPE1, TALB).
+When the program runs again, stored data is retrieved from the file.
 
-Extracts frame size and content.
+Transactions update the balance and overwrite the stored data.
 
-Displays or modifies the selected tag.
-
-Writes the updated data back into the file.
+The system ensures that account data remains consistent and persistent across executions.
 
 ▶️ How to Compile
-gcc main.c tag_reader.c tag_editor.c -o mp3_tag_editor
+gcc main.c account.c file_operations.c -o bank_system
 
 ▶️ How to Run
-./mp3_tag_editor -v song.mp3
+./bank_system
 
-
-To edit a tag:
-
-./mp3_tag_editor -e title "New Title" song.mp3
+📊 Sample Operations
+1. Create Account
+2. Deposit Money
+3. Withdraw Money
+4. Check Balance
+5. View Account Details
+6. Delete Account
+7. Exit
 
 📈 Learning Outcomes
 
-Deep understanding of binary file structures
+Understanding of structured data using struct
 
-Working with ID3v2 metadata format
+Practical use of file handling in C
 
-Handling dynamic memory safely
+Implementing real-world logic like banking transactions
 
-Improving debugging and error handling skills
+Improving modular and maintainable code design
 
-Designing modular and maintainable C programs
+Handling user input validation and error cases
 
-🔍 Future Improvements
+🔮 Future Improvements
 
-Add support for ID3v1 tags
+Add password authentication
 
-GUI-based version
+Transaction history tracking
 
-Batch editing multiple files
+Interest calculation feature
 
-Support for album art extraction
+Admin dashboard
 
-Cross-platform build system using Makefile
+Database integration (MySQL)
+
+GUI version
